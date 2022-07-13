@@ -1,0 +1,40 @@
+.footer {
+    background-color: $darkGrey;
+
+    &__nav {
+        padding: 2rem 0;
+    }
+
+    @include media("<=920px") {
+        &__nav { 
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+    }
+
+    &__item {
+        margin-right: 1rem;
+    }
+
+    &__search-bar {
+        background-color: $lighterGrey;
+        height: 2.5rem;
+        width: 20rem;
+        display: flex;
+        border-radius: 6px;
+    }
+
+    &__search {
+        background-color: rgb(231, 231, 231);
+        border: 0;
+        outline: 0;
+        width: 100%;
+        color: black;
+        border-radius: 6px;
+        padding: 1rem;
+    }
+}

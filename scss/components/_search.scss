@@ -1,0 +1,31 @@
+.search {
+    background-color: $darkGrey;
+
+    &__buttons {
+        border-bottom: 1px solid white;
+        
+    }
+
+    @include media("<=765px") {
+        &__buttons {
+            flex-direction: column;
+        }
+    }
+
+    @include media("<=980px") {
+        .search__filter {
+            flex-direction: column;
+        }
+
+        .search__button-group {
+            flex-direction: column;
+            background-color: aqua;
+        }   
+    }
+    
+
+    &__result {
+        display: inline-block;
+        color: $specialBlue;
+    }
+}

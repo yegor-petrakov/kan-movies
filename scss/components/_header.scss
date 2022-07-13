@@ -1,0 +1,56 @@
+.header {
+    background-color: $darkGrey;
+
+    &__nav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__menu {
+        list-style: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__cta {
+        background-color: $actionRed;
+        margin-right: 2rem;
+        padding: .7rem 1rem;
+    }
+
+    &__account img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    @include media(">=tablet"){
+        &__humburger {
+            display: none;
+        }
+    }
+    
+    
+    @include media("<tablet") {
+        .header__humburger {
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../../images/humburger.svg);
+            background-repeat: no-repeat;
+            background-size: 3rem;
+            background-position: center;
+            cursor: pointer;
+        } 
+        .header__humburger.active {
+            background-image: url(../../images/close.svg);
+        }
+    }
+    
+
+    @include media("<tablet") { 
+        .header__cta, .header__account, .header__menu {
+            display: none;
+        }
+    }
+}

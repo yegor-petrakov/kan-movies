@@ -1,31 +1,31 @@
 .search {
+    padding: 1rem 0;
     background-color: $darkGrey;
 
-    &__buttons {
-        border-bottom: 1px solid white;
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         
-    }
-
-    @include media("<=765px") {
-        &__buttons {
+        @include media("<=900px") {
             flex-direction: column;
         }
     }
 
-    @include media("<=980px") {
-        .search__filter {
+    .btn-group {
+        @include media("<=900px") {
+            width: 100%;
             flex-direction: column;
         }
-
-        .search__button-group {
-            flex-direction: column;
-            background-color: aqua;
-        }   
     }
-    
 
     &__result {
         display: inline-block;
         color: $specialBlue;
+        margin: 1rem 0;
     }
+}
+
+.selected-group {
+    flex-wrap: wrap;
 }

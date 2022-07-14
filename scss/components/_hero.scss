@@ -20,6 +20,10 @@
         padding-top: 50px;
         padding-bottom: 25px; 
         margin: 0 auto;
+        
+        &>.btn {
+            margin: .5rem;
+        }
     }
 
     @include media("<=430px") {

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import "./globals";
+@import "./variables";
+@import "breakpoints";
+@import "components/header";
+@import "components/hero";
+@import "components/search";
+@import "components/movies";
+@import "components/buttons";
+@import "components/footer";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $lightGrey;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+input {
+    color: rgb(255, 0, 0);
+}
+
+
+
+
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    // @include media("<=phone") {
+    //     background-color: deeppink;
+    // }
+
+    // @include media(">phone", "<=tablet") {
+    //     background-color: rgb(0, 190, 228);
+    // }
+
+    // @include media(">tablet", "<=desktop") {
+    //     background-color: rgb(77, 213, 14);
+    // }
+
+    // @include media(">desktop") {
+    //     background-color: rgb(119, 119, 119);
+    // }
+}
+
+
+
+i.arrow-down {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-image: url(../images/arrow-down.svg);
+}
+i.cross {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-image: url(../images/cross.svg);
+}
+i.search-btn {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url(../images/search.svg);
+}
+i.contact-us {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url(../images/contact-us.svg);
+}
+
+
+
+
+
+.movies {
+    &__container {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        gap: 30px 20px;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        color: white;
+        text-align: center;
+        font-size: $font-md;
+    }
+}
+
+
+

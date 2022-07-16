@@ -1,0 +1,112 @@
+.header {
+    background-color: $darkGrey;
+    width: 100%;
+    top: 0;
+    
+    &__nav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__menu {
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        transition: color .3s;
+    }
+
+    &__item:hover {
+        color: $attentionRed;
+        transition: color .3s;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__cta {
+        margin-right: 2rem;
+        padding: .7rem 1rem;
+        transition: background-color .3s;
+    }
+
+    &__cta:hover {
+        background-color: $attentionRedHover;
+        transition: background-color .3s;
+    }
+
+    &__account img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    @include media(">=tablet"){
+        &__humburger svg {
+            display: none;
+        }
+
+        .sidebar-menu {
+            &.active {
+                right: -2990px;
+            }
+        }
+    }
+    
+    
+    @include media("<tablet") {
+        .header__humburger .header__humburger svg {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+        } 
+        .header__humburger.active {
+            display: block;
+        }
+    }
+    
+
+    @include media("<tablet") { 
+        .header__cta, .header__account, .header__menu {
+            display: none;
+        }
+    }
+}
+
+
+.sidebar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    background-color: $darkGrey;
+    right: -2990px;
+    transition: right .9s;
+    z-index: 5;
+
+    &.active {
+        top: 70px;
+        right: 0;
+        transition: right .3s;
+    }
+
+    &__item {
+        font-size: $font-lg - .8rem;
+        width: 95vw;
+        padding: .5rem 0;
+        border-radius: .3rem;
+        margin: 1.3rem 0;
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+
+
+    &__item:hover {
+        background-color: $lighterGrey;
+
+    }
+}

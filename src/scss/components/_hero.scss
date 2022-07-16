@@ -1,0 +1,50 @@
+.hero {
+    .container {
+        margin-top: 1rem;
+    }
+    &__title {
+        font-size: $font-xlg;
+        font-weight: $fw-bold;
+        color: white;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    @include media("<=tablet") {
+        .hero__title {
+            font-size: $font-lg;
+            font-weight: $fw-bold;
+        }
+    }
+
+    &__buttons {
+        padding-top: 50px;
+        padding-bottom: 25px; 
+        margin: 0 auto;
+        
+        &>.btn {
+            margin: .5rem;
+        }
+    }
+
+    @include media("<=430px") {
+        .hero__buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: .6rem;
+        }
+    }
+
+    &__container-movies {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__title-movie {
+        margin-top: 5px;
+        text-align: center;
+        color: white;
+    }
+}
